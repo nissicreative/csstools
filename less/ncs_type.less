@@ -1,0 +1,238 @@
+/**
+ * Typography Helpers
+ */
+
+// Font Family
+// -------------------------------------------------- //
+.serif {
+    font-family: @font-family-serif;
+}
+
+.sans-serif {
+    font-family: @font-family-sans-serif;
+}
+
+.monospace {
+    font-family: @font-family-monospace;
+}
+
+// Size
+// -------------------------------------------------- //
+.larger {
+    font-size: larger;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+// Color
+// -------------------------------------------------- //
+.text-white {
+    color: #fff !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-gray-lighter {
+    color: @gray-lighter !important;
+}
+
+.text-gray-light {
+    color: @gray-light !important;
+}
+
+.text-gray {
+    color: @gray !important;
+}
+
+.text-gray-dark {
+    color: @gray-dark !important;
+}
+
+.text-gray-darker {
+    color: @gray-darker !important;
+}
+
+.inverse {
+    color: @gray-lighter;
+}
+
+// Weight
+// -------------------------------------------------- //
+.normal {
+    font-weight: normal !important;
+}
+
+.strong,
+.bold {
+    font-weight: bold !important;
+}
+
+.text-100 {
+    font-weight: 100 !important;
+}
+
+.text-200 {
+    font-weight: 200 !important;
+}
+
+.text-300 {
+    font-weight: 300 !important;
+}
+
+.text-400 {
+    font-weight: 400 !important;
+}
+
+.text-500 {
+    font-weight: 500 !important;
+}
+
+.text-600 {
+    font-weight: 600 !important;
+}
+
+.text-700 {
+    font-weight: 700 !important;
+}
+
+.text-800 {
+    font-weight: 800 !important;
+}
+
+.text-900 {
+    font-weight: 900 !important;
+}
+
+// Alignment and Spacing
+// -------------------------------------------------- //
+.center,
+.text-center {
+    text-align: center !important;
+}
+
+.align-left,
+.text-left {
+    text-align: left !important;
+}
+
+.align-right,
+.text-right {
+    text-align: right !important;
+}
+
+.justify,
+.text-justify {
+    text-align: justify !important;
+}
+
+.no-lead {
+    line-height: normal !important;
+}
+
+// Wrapping and breaking
+// -------------------------------------------------- //
+.hyphenate {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.no-break {
+    word-wrap: normal;
+    -ms-word-break: keep-all;
+    word-break: keep-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+.no-wrap {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    word-wrap: normal !important;
+}
+
+.truncate {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Case Transformations and Styles
+// -------------------------------------------------- //
+.no-transform {
+    text-transform: none !important;
+}
+
+.capitalize,
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.uppercase,
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.lowercase,
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.em,
+.italic {
+    font-style: italic !important;
+}
+
+// Lists
+// -------------------------------------------------- //
+.list-decimal {
+    list-style-type: decimal;
+}
+
+.list-decimal-leading-zero {
+    list-style-type: decimal-leading-zero;
+}
+
+.list-lower-alpha {
+    list-style-type: lower-alpha;
+}
+
+.list-lower-greek {
+    list-style-type: lower-greek;
+}
+
+.list-lower-latin {
+    list-style-type: lower-latin;
+}
+
+.list-lower-roman {
+    list-style-type: lower-roman
+}
+
+.list-upper-alpha {
+    list-style-type: upper-alpha;
+}
+
+.list-upper-greek {
+    list-style-type: upper-greek;
+}
+
+.list-upper-latin {
+    list-style-type: upper-latin;
+}
+
+.list-upper-roman {
+    list-style-type: upper-roman
+}

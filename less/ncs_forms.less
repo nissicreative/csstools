@@ -1,0 +1,29 @@
+/*
+ * Form Helpers
+ */
+
+label b,
+.control-label b {
+    position: absolute;
+    margin-left: .2em;
+    color: @brand-danger;
+    font-style: normal;
+}
+
+.form-required-notice {
+    color: @gray-light;
+    text-align: right;
+    font-size: smaller;
+    b {
+        color: @brand-danger;
+    }
+    .no-required & {
+        display: none;
+    }
+}
+
+input[type=number].no-spin::-webkit-inner-spin-button,
+input[type=number].no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,168 @@
+/**
+ * LESS Mixins
+ */
+
+// Typography
+// -------------------------------------------------- //
+.word-wrap() {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.truncate(@width: 100%) {
+    width: @width;
+    .ellipsis();
+}
+
+// Forms
+// -------------------------------------------------- //
+.placeholder(@color) {
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: @color;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: @color;
+    }
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+}
+
+// Overlays & Fills
+// -------------------------------------------------- //
+.fill() {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.overlay(@background: rgba(0, 0, 0, 0.5)) {
+    .fill();
+    background: @background;
+}
+
+.bg-image(@position: center center) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: @position;
+}
+
+// Icon Buttons
+// -------------------------------------------------- //
+.icon-base(@icon-size: 48px;
+@border-radius: 100%;
+@font-size: ceil(@icon-size/2);
+@border: 1px solid;
+@transition: all 0.3s ease) {
+    position: relative;
+    display: inline-block;
+    padding: 0 !important;
+    width: @icon-size;
+    height: @icon-size;
+    border: @border;
+    border-radius: @border-radius;
+    text-align: center;
+    font-size: @font-size;
+    line-height: @icon-size !important;
+    transition: @transition;
+}
+
+
+/* Icon Button Colors */
+
+.icon-variant(@bg-color: transparent;
+@text-color: #fff;
+@bg-color-hover: darken(@bg-color, 10%);
+@text-color-hover: @text-color;
+@border-color-hover: inherit) {
+    background: @bg-color !important;
+    color: @text-color !important;
+    &:hover {
+        background: @bg-color-hover !important;
+        color: @text-color-hover !important;
+        border-color: @border-color-hover !important;
+    }
+}
+
+
+/* Need to Redeclare */
+
+.fa() {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.fa-fw() {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+// Arrows (CSS Triangles)
+// -------------------------------------------------- //
+.arrow-base(@size: 20px;
+@z-index: 2) {
+    position: absolute;
+    z-index: @z-index;
+    width: 0;
+    height: 0;
+    border: @size solid transparent;
+    content: '';
+}
+
+.arrow-up(@color: #fff;
+@size: 20px;
+@left: 50%) {
+    .arrow-base(@size);
+    left: @left;
+    margin-left: -@size;
+    border-bottom-color: @color;
+}
+
+.arrow-down(@color: #fff;
+@size: 20px;
+@left: 50%) {
+    .arrow-base(@size);
+    left: @left;
+    margin-left: -@size;
+    border-top-color: @color;
+}
+
+.arrow-left(@color: #fff;
+@size: 20px;
+) {
+    .arrow-base(@size);
+    margin-left: -@size;
+    border-right-color: @color;
+}
+
+.arrow-right(@color: #fff;
+@size: 20px;
+) {
+    .arrow-base(@size);
+    margin-left: -@size;
+    border-left-color: @color;
+}

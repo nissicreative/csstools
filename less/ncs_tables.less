@@ -1,0 +1,40 @@
+/**
+ * Table Styles
+ */
+
+.table-plain > tbody> tr> td {
+    border: none !important;
+}
+
+.table-plain> thead> tr> th {
+    border: none !important;
+}
+
+.table-ultra-condensed tbody > tr > td {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+table.sortable thead th a {
+    position: relative;
+    display: block;
+    &.sorting::after,
+    &.sorting-asc::after,
+    &.sorting-desc::after {
+        .fa();
+        position: absolute;
+        top: 50%;
+        margin-left: 0.5em;
+        margin-top: -0.5em;
+    }
+    &.sorting::after {
+        content: "\f0dc";
+        color: @gray-light;
+    }
+    &.sorting-asc::after {
+        content: "\f0de";
+    }
+    &.sorting-desc::after {
+        content: "\f0dd";
+    }
+}
