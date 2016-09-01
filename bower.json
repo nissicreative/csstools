@@ -1,0 +1,21 @@
+{
+  "name": "csstools",
+  "homepage": "https://github.com/nissicreative/csstools",
+  "authors": [
+    "Michael Folsom <mike@nissicreative.com>"
+  ],
+  "description": "Utlities and mixins for extending your CSS library.",
+  "main": "",
+  "keywords": [
+    "css",
+    "less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
