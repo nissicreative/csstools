@@ -9,3 +9,100 @@
 .btn-group {
     display: flex;
 }
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+// Mixins
+// --------------------------------------------------------------------- //
+.ghost-button (@color: @brand-primary;
+@hover-color: #fff;
+@hover-bg: @color) {
+    color: @color;
+    background-color: transparent;
+    border-color: @color;
+    &:focus,
+    &.focus {
+        color: @hover-color;
+        background-color: @hover-bg;
+        border-color: @color;
+    }
+    &:hover {
+        color: @hover-color;
+        background-color: @hover-bg;
+        border-color: @color;
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        color: @color;
+        background-color: @hover-bg;
+        border-color: @color;
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color;
+            background-color: @hover-bg;
+            border-color: @color;
+        }
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: @hover-bg;
+            border-color: @color;
+        }
+    }
+}
+
+// Alternate button mixins (redefine font size and padding)
+// --------------------------------------------------------------------- //
+.btn-alt(@font-size;
+@offset: 0) {
+    font-size: @font-size;
+    line-height: @line-height-computed;
+    padding-top: @padding-base-vertical + @offset;
+    padding-bottom: @padding-base-vertical - @offset;
+}
+
+.btn-sm-alt(@font-size;
+@offset: 0) {
+    font-size: @font-size;
+    line-height: floor(@line-height-small * @font-size-small);
+    padding-top: @padding-base-vertical + @offset;
+    padding-bottom: @padding-base-vertical - @offset;
+}
+
+.btn-lg-alt(@font-size;
+@offset: 0) {
+    font-size: @font-size;
+    line-height: floor(@line-height-large * @font-size-large);
+    padding-top: @padding-base-vertical + @offset;
+    padding-bottom: @padding-base-vertical - @offset;
+}
