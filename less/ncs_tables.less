@@ -2,12 +2,11 @@
  * Table Styles
  */
 
-.table-plain > tbody> tr> td {
-    border: none !important;
-}
-
-.table-plain> thead> tr> th {
-    border: none !important;
+.table-plain > tbody > tr {
+    & > td,
+    & > th {
+        border: none !important;
+    }
 }
 
 .table-ultra-condensed tbody > tr > td {
@@ -36,5 +35,71 @@ table.sortable thead th a {
     }
     &.sorting-desc::after {
         content: "\f0dd";
+    }
+}
+
+tr.text-left {
+    th,
+    td {
+        text-align: left;
+    }
+}
+
+tr.text-center {
+    th,
+    td {
+        text-align: center;
+    }
+}
+
+tr.text-right {
+    th,
+    td {
+        text-align: right;
+    }
+}
+
+.table {
+    & > thead,
+    & > tfoot,
+    & > tbody {
+        tr {
+            &.v-middle {
+                th,
+                td {
+                    vertical-align: middle;
+                }
+            }
+            th,
+            td {
+                &.v-middle {
+                    vertical-align: middle;
+                }
+            }
+            &.v-bottom {
+                th,
+                td {
+                    vertical-align: bottom;
+                }
+            }
+            th,
+            td {
+                &.v-bottom {
+                    vertical-align: bottom;
+                }
+            }
+            &.v-top {
+                th,
+                td {
+                    vertical-align: top;
+                }
+            }
+            th,
+            td {
+                &.v-top {
+                    vertical-align: top;
+                }
+            }
+        }
     }
 }

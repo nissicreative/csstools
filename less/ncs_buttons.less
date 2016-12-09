@@ -41,12 +41,12 @@
     border-color: @color;
     &:focus,
     &.focus {
-        color: @hover-color;
+        color: @hover-color !important;
         background-color: @hover-bg;
         border-color: @color;
     }
     &:hover {
-        color: @hover-color;
+        color: @hover-color !important;
         background-color: @hover-bg;
         border-color: @color;
     }
@@ -87,22 +87,38 @@
 @offset: 0) {
     font-size: @font-size;
     line-height: @line-height-computed;
-    padding-top: @padding-base-vertical + @offset;
-    padding-bottom: @padding-base-vertical - @offset;
+    padding-top: @padding-base-vertical + @offset !important;
+    padding-bottom: @padding-base-vertical - @offset !important;
+}
+
+.btn-xs-alt(@font-size;
+@offset: 0) {
+    font-size: @font-size;
+    line-height: round(@line-height-small * @font-size-small);
+    padding-top: @padding-xs-vertical + @offset !important;
+    padding-bottom: @padding-xs-vertical - @offset !important;
 }
 
 .btn-sm-alt(@font-size;
 @offset: 0) {
     font-size: @font-size;
-    line-height: floor(@line-height-small * @font-size-small);
-    padding-top: @padding-base-vertical + @offset;
-    padding-bottom: @padding-base-vertical - @offset;
+    line-height: round(@line-height-small * @font-size-small);
+    padding-top: @padding-small-vertical + @offset !important;
+    padding-bottom: @padding-small-vertical - @offset !important;
 }
 
 .btn-lg-alt(@font-size;
 @offset: 0) {
     font-size: @font-size;
-    line-height: floor(@line-height-large * @font-size-large);
-    padding-top: @padding-base-vertical + @offset;
-    padding-bottom: @padding-base-vertical - @offset;
+    line-height: round(@line-height-large * @font-size-large);
+    padding-top: @padding-large-vertical + @offset !important;
+    padding-bottom: @padding-large-vertical - @offset !important;
+}
+
+.btn-xl-alt(@font-size;
+@offset: 0) {
+    font-size: @font-size;
+    line-height: round(@line-height-xl * @font-size-xl);
+    padding-top: @padding-xl-vertical + @offset !important;
+    padding-bottom: @padding-xl-vertical - @offset !important;
 }
