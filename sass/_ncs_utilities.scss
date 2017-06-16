@@ -1,0 +1,112 @@
+// Responsive Fixes
+// -------------------------------------------------- //
+@media (max-width:$screen-xs-max) {
+    .xs-pad > div {
+        margin-top: $line-height-computed;
+    }
+    .xs-margin {
+        margin-top: $line-height-computed;
+    }
+    .xs-margin-double {
+        margin-top: $line-height-computed * 2;
+    }
+    .xs-margin-triple {
+        margin-top: $line-height-computed * 3;
+    }
+    .xs-padding {
+        padding-top: $line-height-computed;
+    }
+    .xs-padding-double {
+        padding-top: $line-height-computed * 2;
+    }
+    .xs-padding-triple {
+        padding-top: $line-height-computed * 3;
+    }
+    .xs-center {
+        text-align: center !important;
+    }
+}
+
+@media (max-width:$screen-sm-max) {
+    .sm-pad > div {
+        margin-top: $line-height-computed;
+    }
+    .sm-margin {
+        margin-top: $line-height-computed;
+    }
+    .sm-margin-double {
+        margin-top: $line-height-computed * 2;
+    }
+    .sm-margin-triple {
+        margin-top: $line-height-computed * 3;
+    }
+    .sm-padding {
+        padding-top: $line-height-computed;
+    }
+    .sm-padding-double {
+        padding-top: $line-height-computed * 2;
+    }
+    .sm-padding-triple {
+        padding-top: $line-height-computed * 3;
+    }
+    .sm-center {
+        text-align: center !important;
+    }
+}
+
+@media (max-width:$screen-md-max) {
+    .md-pad > div {
+        margin-top: $line-height-computed;
+    }
+    .md-margin {
+        margin-top: $line-height-computed;
+    }
+    .md-margin-double {
+        margin-top: $line-height-computed * 2;
+    }
+    .md-margin-triple {
+        margin-top: $line-height-computed * 3;
+    }
+    .md-padding {
+        padding-top: $line-height-computed;
+    }
+    .md-padding-double {
+        padding-top: $line-height-computed * 2;
+    }
+    .md-padding-triple {
+        padding-top: $line-height-computed * 3;
+    }
+    .md-center {
+        text-align: center !important;
+    }
+}
+
+// Touch Devices
+// -------------------------------------------------- //
+.visible-touch {
+    display: none;
+}
+
+.touch {
+    .hidden-touch {
+        display: none;
+    }
+    .visible-touch {
+        display: inherit;
+    }
+}
+
+// Print Styles
+// -------------------------------------------------- //
+.visible-print {
+    display: none;
+}
+
+@media print {
+    .hidden-print {
+        display: none;
+    }
+    .visible-print {
+        display: inherit;
+    }
+}

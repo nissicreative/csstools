@@ -1,0 +1,73 @@
+// Define global background styles
+// -------------------------------------------------- //
+.gray {
+    background: $gray;
+}
+
+.gray-light {
+    background: $gray-light;
+}
+
+.gray-lighter {
+    background: $gray-lighter;
+}
+
+.gray-dark {
+    background: $gray-dark;
+}
+
+.gray-darker {
+    background: $gray-darker;
+}
+
+.black {
+    background: #000;
+}
+
+.white {
+    background: #fff;
+}
+
+.brand-primary {
+    background: $brand-primary;
+}
+
+// Background Images
+// -------------------------------------------------- //
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bg-top {
+    background-position: center top;
+}
+
+.bg-right {
+    background-position: center right;
+}
+
+.bg-bottom {
+    background-position: center bottom;
+}
+
+.bg-left {
+    background-position: center left;
+}
+
+.bg-left-top {
+    background-position: left top;
+}
+
+.bg-left-bottom {
+    background-position: left bottom;
+}
+
+.bg-right-top {
+    background-position: right top;
+}
+
+.bg-right-bottom {
+    background-position: right bottom;
+}

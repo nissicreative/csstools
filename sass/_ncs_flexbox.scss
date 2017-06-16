@@ -1,0 +1,125 @@
+// Basic Setup (Applies to flex container)
+// --------------------------------------------------------------------- //
+.flex,
+.flex-container {
+    display: flex;
+    // Enforce default behavior in non-conforming browsers (IE)
+    & > * {
+        flex: 0 1 auto;
+    }
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+// This is the default behavior.
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+// Center content vertically and horizontally.
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+// Justify Content (Applies to main axis)
+// --------------------------------------------------------------------- //
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+// Align Items (Applies to cross-axis)
+// --------------------------------------------------------------------- //
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+}
+
+.align-items-baseline {
+    align-items: baseline;
+}
+
+// Align Content (Applies only if wrapping takes place)
+// --------------------------------------------------------------------- //
+.align-content-start {
+    align-content: flex-start;
+}
+
+.align-content-end {
+    align-content: flex-end;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.align-content-space-between {
+    align-content: space-between;
+}
+
+.align-content-space-around {
+    align-content: space-around;
+}
+
+// Align Self (Applies to a flex item)
+// --------------------------------------------------------------------- //
+.align-self-auto {
+    align-self: auto;
+}
+
+.align-self-start {
+    align-self: flex-start;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-stretch {
+    align-self: stretch;
+}
+
+.align-self-baseline {
+    align-self: baseline;
+}

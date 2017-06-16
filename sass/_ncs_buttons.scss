@@ -1,0 +1,115 @@
+// Button Styles
+// -------------------------------------------------- //
+.btn-circle {
+    border-radius: 100%;
+}
+
+.btn-group {
+    display: flex;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+// Mixins
+// -------------------------------------------------- //
+@mixin ghost-button ($color: $brand-primary, $hover-color: #fff, $hover-bg: $color) {
+    color: $color;
+    background-color: transparent;
+    border-color: $color;
+    &:focus,
+    &.focus {
+        color: $hover-color !important;
+        background-color: $hover-bg;
+        border-color: $color;
+    }
+    &:hover {
+        color: $hover-color !important;
+        background-color: $hover-bg;
+        border-color: $color;
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle & {
+        color: $color;
+        background-color: $hover-bg;
+        border-color: $color;
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: $hover-bg;
+            border-color: $color;
+        }
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle & {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: $hover-bg;
+            border-color: $color;
+        }
+    }
+}
+
+// Alternate button mixins (redefine font size and padding)
+// --------------------------------------------------------------------- //
+@mixin btn-alt($font-size, $offset: 0) {
+    font-size: $font-size;
+    line-height: $line-height-computed;
+    padding-top: $padding-base-vertical + $offset !important;
+    padding-bottom: $padding-base-vertical - $offset !important;
+}
+
+@mixin btn-xs-alt($font-size, $offset: 0) {
+    font-size: $font-size;
+    line-height: round($line-height-small * $font-size-small);
+    padding-top: $padding-xs-vertical + $offset !important;
+    padding-bottom: $padding-xs-vertical - $offset !important;
+}
+
+@mixin btn-sm-alt($font-size, $offset: 0) {
+    font-size: $font-size;
+    line-height: round($line-height-small * $font-size-small);
+    padding-top: $padding-small-vertical + $offset !important;
+    padding-bottom: $padding-small-vertical - $offset !important;
+}
+
+@mixin btn-lg-alt($font-size, $offset: 0) {
+    font-size: $font-size;
+    line-height: round($line-height-large * $font-size-large);
+    padding-top: $padding-large-vertical + $offset !important;
+    padding-bottom: $padding-large-vertical - $offset !important;
+}
+
+@mixin btn-xl-alt($font-size, $offset: 0) {
+    font-size: $font-size;
+    line-height: round($line-height-xl * $font-size-xl);
+    padding-top: $padding-xl-vertical + $offset !important;
+    padding-bottom: $padding-xl-vertical - $offset !important;
+}
