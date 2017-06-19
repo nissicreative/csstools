@@ -1,0 +1,311 @@
+// Layout Utility Classes
+// -------------------------------------------------- //
+.no-gutter {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.auto-width {
+    width: auto;
+}
+
+.vw100 {
+    width: 100vw;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.vh33 {
+    height: 33.3333vh;
+}
+
+.vh25 {
+    height: 25vh;
+}
+
+.vh50 {
+    height: 50vh;
+}
+
+.vh67 {
+    height: 66.6667vh;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.float-left {
+    float: left;
+    margin: 0 1em .5em 0;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 .5em 1em;
+}
+
+.clear {
+    clear: both;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.first {
+    @extend .no-top;
+}
+
+.last {
+    @extend .no-bottom;
+}
+
+// Padding and Margin Shortcuts
+// -------------------------------------------------- //
+.shrinkwrap {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-pad {
+    padding: 0 !important;
+}
+
+.no-bottom {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.no-top {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.margin {
+    margin: $line-height-computed 0 !important;
+}
+
+.margin-double {
+    margin: $line-height-computed * 2 0 !important;
+}
+
+.margin-triple {
+    margin: $line-height-computed * 3 0 !important;
+}
+
+.margin-top {
+    margin-top: $line-height-computed !important;
+}
+
+.margin-top-double {
+    margin-top: $line-height-computed * 2 !important;
+}
+
+.margin-top-triple {
+    margin-top: $line-height-computed * 3 !important;
+}
+
+.margin-bottom {
+    margin-bottom: $line-height-computed !important;
+}
+
+.margin-bottom-double {
+    margin-bottom: $line-height-computed * 2 !important;
+}
+
+.margin-bottom-triple {
+    margin-bottom: $line-height-computed * 3 !important;
+}
+
+.padding {
+    padding: $line-height-computed !important;
+}
+
+.padding-half {
+    padding: ceil($line-height-computed) / 2 !important;
+}
+
+.padding-double {
+    padding: $line-height-computed * 2 !important;
+}
+
+.padding-triple {
+    padding: $line-height-computed * 3 !important;
+}
+
+.padding-top {
+    padding-top: $line-height-computed !important;
+}
+
+.padding-top-half {
+    padding-top: ceil($line-height-computed) / 2 !important;
+}
+
+.padding-top-double {
+    padding-top: $line-height-computed * 2 !important;
+}
+
+.padding-top-triple {
+    padding-top: $line-height-computed * 3 !important;
+}
+
+.padding-bottom-half {
+    padding-bottom: ceil($line-height-computed) / 2 !important;
+}
+
+.padding-bottom {
+    padding-bottom: $line-height-computed !important;
+}
+
+.padding-bottom-double {
+    padding-bottom: $line-height-computed * 2 !important;
+}
+
+.padding-bottom-triple {
+    padding-bottom: $line-height-computed * 3 !important;
+}
+
+.inset {
+    padding-right: ceil($grid-gutter-width / 2);
+    padding-left: ceil($grid-gutter-width / 2);
+}
+
+.inset-double {
+    padding-right: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
+}
+
+.inset-triple {
+    padding-right: ceil($grid-gutter-width * 1.5);
+    padding-left: ceil($grid-gutter-width * 1.5);
+}
+
+.inset-left {
+    padding-left: ceil($grid-gutter-width / 2);
+}
+
+.inset-left-double {
+    padding-left: $grid-gutter-width;
+}
+
+.inset-left-triple {
+    padding-left: ceil($grid-gutter-width * 1.5);
+}
+
+.inset-right {
+    padding-right: ceil($grid-gutter-width / 2);
+}
+
+.inset-right-double {
+    padding-right: $grid-gutter-width;
+}
+
+.inset-right-triple {
+    padding-right: ceil($grid-gutter-width * 1.5);
+}
+
+// Positioning Shortcuts
+// -------------------------------------------------- //
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.static {
+    position: static;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+// Vertical Alignment
+// -------------------------------------------------- //
+.align-baseline {
+    vertical-align: baseline;
+}
+
+.align-sub {
+    vertical-align: sub;
+}
+
+.align-super {
+    vertical-align: super;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.align-text-top {
+    vertical-align: text-top;
+}
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.align-bottom {
+    vertical-align: bottom;
+}
+
+.align-text-bottom {
+    vertical-align: text-bottom;
+}
+
+.align-initial {
+    vertical-align: initial;
+}
+
+.align-inherit {
+    vertical-align: inherit;
+}
+
+// Borders
+// -------------------------------------------------- //
+.no-border {
+    border: none;
+}
+
+.bordered {
+    border: 1px solid;
+}

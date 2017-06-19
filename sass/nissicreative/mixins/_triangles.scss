@@ -1,0 +1,34 @@
+// Arrows (CSS Triangles)
+// -------------------------------------------------- //
+@mixin triangle-base($size: 20px, $z-index: 2) {
+    position: absolute;
+    z-index: $z-index;
+    width: 0;
+    height: 0;
+    border: $size solid transparent;
+    content: '';
+}
+
+@mixin triangle-up($color: #fff, $size: 20px, $left: 50%) {
+    @include triangle-base($size);
+    left: $left;
+    margin-left: -$size;
+    border-bottom-color: $color;
+}
+
+@mixin triangle-down($color: #fff, $size: 20px, $left: 50%) {
+    @include triangle-base($size);
+    left: $left;
+    margin-left: -$size;
+    border-top-color: $color;
+}
+
+@mixin triangle-left($color: #fff, $size: 20px) {
+    @include triangle-base($size);
+    border-right-color: $color;
+}
+
+@mixin triangle-right($color: #fff, $size: 20px) {
+    @include triangle-base($size);
+    border-left-color: $color;
+}

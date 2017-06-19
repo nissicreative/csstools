@@ -1,0 +1,24 @@
+// Icon Buttons
+// -------------------------------------------------- //
+@mixin icon-base($icon-size: 48px, $font-size: ceil($icon-size/2), $border-radius: 100%, $transition: all 0.3s ease) {
+    position: relative;
+    display: inline-block;
+    padding: 0 !important;
+    width: $icon-size;
+    height: $icon-size;
+    border-radius: $border-radius;
+    text-align: center;
+    font-size: $font-size;
+    line-height: $icon-size !important;
+    transition: $transition;
+}
+
+@mixin icon-variant($bg-color: transparent, $text-color: #fff, $bg-color-hover: darken($bg-color, 10%), $text-color-hover: $text-color, $border-color-hover: inherit) {
+    background: $bg-color !important;
+    color: $text-color !important;
+    &:hover {
+        background: $bg-color-hover !important;
+        color: $text-color-hover !important;
+        border-color: $border-color-hover !important;
+    }
+}
