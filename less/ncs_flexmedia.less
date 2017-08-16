@@ -1,0 +1,20 @@
+// Flexbox Media Object
+// -------------------------------------------------- //
+
+@flexgrid-breakpoint: 480px;
+.flex-media {
+    .image {
+        text-align: center;
+        margin-bottom: $line-height-computed;
+    }
+    @media (min-width: @flexgrid-breakpoint) {
+        display: flex;
+        .image {
+            flex: 0 0 auto;
+            margin-right: @grid-gutter-width;
+        }
+        .text {
+            flex: 1 1 auto;
+        }
+    }
+}
