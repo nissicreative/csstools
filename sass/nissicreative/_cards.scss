@@ -7,9 +7,10 @@
     border: 1px solid $panel-default-border;
     border-radius: $panel-border-radius;
     @include clearfix();
-    & > *:first-child {
+    &>*:first-child {
         margin-top: 0;
     }
-    & > *:last-child {
+    &>*:last-child {
         margin-bottom: 0;
+    }
 }
