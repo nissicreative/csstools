@@ -1,6 +1,6 @@
 {
   "name": "nissicreative-csstools",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Utilities and mixins for extending your CSS library",
   "main": "./sass/_ncs_helpers.scss",
   "scripts": {
