@@ -1,12 +1,22 @@
 // Basic Setup (Applies to flex container)
 // --------------------------------------------------------------------- //
-.flex,
-.flex-container {
+@mixin flexbox() {
     display: flex;
     // Enforce default behavior in non-conforming browsers (IE)
-    & > * {
+    &>* {
         flex: 0 1 auto;
     }
+}
+
+@mixin flex-center() {
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex,
+.flex-container {
+    @include flexbox;
 }
 
 .flex-wrap {
@@ -28,8 +38,7 @@
 
 // Center content vertically and horizontally.
 .flex-center {
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
 }
 
 // Justify Content (Applies to main axis)
